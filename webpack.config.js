@@ -23,7 +23,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: "./src/index.html"
 });
 const environmentPlugin = new webpack.EnvironmentPlugin({
-  API_URI: "",
+  API_URI: "https://comercio-core.herokuapp.com",
   APP_MOUNT_URI: "/",
   DEMO_MODE: false,
   GTM_ID: ""
