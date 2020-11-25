@@ -23,7 +23,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: "./src/index.html"
 });
 const environmentPlugin = new webpack.EnvironmentPlugin({
-  API_URI: "https://comercio-core.herokuapp.com",
+  API_URI: "https://comercio-core.herokuapp.com/graphql/",
   APP_MOUNT_URI: "/",
   DEMO_MODE: false,
   GTM_ID: ""
@@ -38,7 +38,7 @@ module.exports = (env, argv) => {
   let output;
 
   if (!process.env.API_URI) {
-     process.env.API_URI = "https://comercio-core.herokuapp.com/graphql/";
+    process.env.API_URI = "https://comercio-core.herokuapp.com/graphql/";
   }
 
   if (!devMode) {
