@@ -38,7 +38,7 @@ module.exports = (env, argv) => {
   let output;
 
   if (!process.env.API_URI) {
-    throw new Error("Environment variable API_URI not set");
+     process.env.API_URI = "https://comercio-core.herokuapp.com/graphql/";
   }
 
   if (!devMode) {
